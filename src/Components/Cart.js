@@ -7,7 +7,7 @@ function CartPage() {
   const [total, setTotal] = useState();
   useEffect(() => {
     setTotal(cart.reduce((acc, curr) => acc + Number(curr.price), 0));
-  }, []);
+  }, [cart]);
 
   return (
     <div>
